@@ -4,50 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crontab Command in Linux - A Comprehensive Guide</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      max-width: 900px;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    code {
-      background-color: #f4f4f4;
-      padding: 2px 4px;
-      font-family: monospace;
-    }
-    pre {
-      background-color: #f4f4f4;
-      padding: 10px;
-      border-left: 4px solid #ccc;
-      overflow-x: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    th {
-      background-color: #f0f0f0;
-    }
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      margin: 40px 0;
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -62,6 +19,7 @@
     <li><a href="#using-the-crontab-command">Using the crontab Command</a></li>
     <li><a href="#options-available-in-crontab">Options Available in crontab</a></li>
     <li><a href="#examples-of-crontab-usage">Examples of crontab Usage</a></li>
+    <li><a href="#Checking Cron Logs">Checking Cron Logs</a></li>
     <li><a href="#alternatives-to-crontab">Alternatives to crontab</a></li>
     <li><a href="#best-practices">Best Practices</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -143,6 +101,20 @@ sudo zypper install cron</code></pre>
   </table>
 
   <hr>
+
+  <h2 id="Checking Cron Logs">Checking Cron Logs</h2>
+
+  <h3>For System Logs:</h3>
+  <pre><code>/var/log/syslog or /var/log/cron</code></pre>
+
+  <h3>For to view cron-specific logs:</h3>
+  <pre><code>grep CRON /var/log/syslog</code></pre>
+
+  <h3>For Specific User:</h3>
+  <pre><code>grep "CMD" /var/log/syslog | grep "username"</code></pre>
+
+  <h3>For Recent Logs:</h3>
+  <pre><code>journalctl -u cron --since "1 hour ago"</code></pre>
 
   <h2 id="alternatives-to-crontab">Alternatives to crontab</h2>
   <ul>
