@@ -53,7 +53,7 @@ poetry init  # Follow prompts
 
   <hr>
 
-  <h2 id="Managing Dependencies">Managing Dependenciest</h2>
+  <h2 id="Managing Dependencies">Managing Dependencies</h2>
   <pre><code># Add a dependency
 poetry add &lt;package&gt;  # e.g., poetry add numpy
 
