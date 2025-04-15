@@ -138,6 +138,8 @@ poetry config virtualenvs.path /path/to/venvs
   <ul>
     <li><strong>"Project not initialized"</strong>: Run <code>poetry init</code> in the project root.</li>
     <li><strong>Dependency conflicts</strong>: Use <code>poetry update</code> or manually resolve in <code>pyproject.toml</code>.</li>
+    <li><strong>"SSL certificate errors"</strong>: <code>poetry config certificates.<repo>.cert /path/to/cert.pem</code></li>
+    <li><strong>"Virtualenv not detected"</strong>: Run <code>poetry env use python3.x</code>explicitly..</li>
   </ul>
 
   <hr>
