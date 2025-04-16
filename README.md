@@ -1,139 +1,217 @@
+![image](https://github.com/user-attachments/assets/e93e9988-17e8-43f8-8601-7acfcd679bfb)
+
+
+
+
 | Author      | Created on  | Version    | Last updated by | Last edited on |
 |-------------|-------------|------------|-----------------|----------------|
-| Rajeev Ranjan    | 15-04-25    | version 1  | Rajeev Ranjan        |        |
-
+| Rajeev Ranjan    | 16-04-25    | version 1  | Rajeev Ranjan        |        |
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 </head>
 <body>
-  <h1>Maven Commands & Debugging</h1>
 
-  <h2>Table of Contents</h2>
-  <ul class="toc">
-    <li><a href="#intro">Introduction</a></li>
-    <li><a href="#basic">Basic Maven Commands</a>
-      <ul class="toc">
-        <li><a href="#clean-build">Clean & Build</a></li>
-        <li><a href="#dependency">Dependency Management</a></li>
-        <li><a href="#project-gen">Project Generation</a></li>
-        <li><a href="#running">Running Applications</a></li>
-        <li><a href="#site">Site & Reports</a></li>
-      </ul>
-    </li>
-    <li><a href="#debugging">Debugging & Troubleshooting</a>
-      <ul class="toc">
-        <li><a href="#failures">Debugging Build Failures</a></li>
-        <li><a href="#skip-tests">Skipping Tests</a></li>
-        <li><a href="#surefire">Debugging Surefire</a></li>
-        <li><a href="#plugins">Debugging Maven Plugins</a></li>
-        <li><a href="#profiles">Profiles & Properties</a></li>
-      </ul>
-    </li>
-    <li><a href="#issues">Common Issues & Fixes</a></li>
-    <li><a href="#Contact Information">Contact Information</a></li>
-    <li><a href="#References">References</a></li>
-  </ul>
+<h2>Table of Contents</h2>
+<ul class="toc">
+  <li><a href="#structure">Standard Directory Structure</a></li>
+  <li><a href="#Detailed Explanation of Each Directory">Detailed Explanation of Each Directory</a></li>
+  <li>
+    <ul>
+      <li><a href="#defaults">1. defaults/main.yml</a></li>
+      <li><a href="#files">2. files/</a></li>
+      <li><a href="#handlers">3. handlers/main.yml</a></li>
+      <li><a href="#meta">4. meta/main.yml</a></li>
+      <li><a href="#tasks">5. tasks/main.yml</a></li>
+      <li><a href="#templates">6. templates/</a></li>
+      <li><a href="#vars">7. vars/main.yml</a></li>
+      <li><a href="#tests">8. tests/</a></li>
+      <li><a href="#readme">9. README.md</a></li>
+    </ul>
+  </li>
+  <li><a href="#best-practices">Best Practices</a></li>
+</ul>
 
-  <h2 id="intro">Introduction</h2>
-  <p>Maven is a popular build automation tool used primarily for Java projects. Below are commonly used Maven commands and debugging options, organized into tables for clarity.</p>
+<h1>Ansible Role Directory Structure Explained</h1>
 
-  <h2 id="basic">Basic Maven Commands</h2>
+<p>An Ansible role provides a framework for organizing playbooks, variables, files, templates, and tasks in a standardized way. Here's a breakdown of the default directory structure and the purpose of each component:</p>
 
-  <h3 id="clean-build">Clean & Build</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn clean</code></td><td>Deletes the <code>target</code> directory</td></tr>
-    <tr><td><code>mvn compile</code></td><td>Compiles the source code</td></tr>
-    <tr><td><code>mvn test</code></td><td>Runs unit tests</td></tr>
-    <tr><td><code>mvn package</code></td><td>Packages the compiled code into a JAR/WAR file</td></tr>
-    <tr><td><code>mvn install</code></td><td>Installs the built artifact into the local Maven repository</td></tr>
-    <tr><td><code>mvn verify</code></td><td>Runs integration tests and checks if the package is valid</td></tr>
-    <tr><td><code>mvn deploy</code></td><td>Deploys the artifact to a remote repository</td></tr>
-  </table>
 
-  <h3 id="dependency">Dependency Management</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn dependency:tree</code></td><td>Displays the dependency tree</td></tr>
-    <tr><td><code>mvn dependency:resolve</code></td><td>Resolves dependencies</td></tr>
-    <tr><td><code>mvn dependency:purge-local-repository</code></td><td>Clears local dependencies and re-downloads them</td></tr>
-  </table>
 
-  <h3 id="project-gen">Project Generation</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn archetype:generate</code></td><td>Creates a new Maven project from an archetype</td></tr>
-  </table>
 
-  <h3 id="running">Running Applications</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn exec:java -Dexec.mainClass="com.example.Main"</code></td><td>Runs a Java main class</td></tr>
-    <tr><td><code>mvn spring-boot:run</code></td><td>Runs a Spring Boot application</td></tr>
-  </table>
+<h2 id="structure">Standard Ansible Role Directory Structure</h2>
+<pre><code>role_name/
+roles/
+    common/               # this hierarchy represents a "role"
+        tasks/            #
+            main.yml      #  <-- tasks file can include smaller files if warranted
+        handlers/         #
+            main.yml      #  <-- handlers file
+        templates/        #  <-- files for use with the template resource
+            ntp.conf.j2   #  <------- templates end in .j2
+        files/            #
+            bar.txt       #  <-- files for use with the copy resource
+            foo.sh        #  <-- script files for use with the script resource
+        vars/             #
+            main.yml      #  <-- variables associated with this role
+        defaults/         #
+            main.yml      #  <-- default lower priority variables for this role
+        meta/             #
+            main.yml      #  <-- role dependencies
+        library/          # roles can also include custom modules
+        module_utils/     # roles can also include custom module_utils
+        lookup_plugins/   # or other types of plugins, like lookup in this case
 
-  <h3 id="site">Site & Reports</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn site</code></td><td>Generates a project site</td></tr>
-    <tr><td><code>mvn surefire-report:report</code></td><td>Generates test reports</td></tr>
-  </table>
+    webtier/              # same kind of structure as "common" was above, done for the webtier role
+    monitoring/           # ""
+    fooapp/               # ""
+</code></pre>
 
-  <h2 id="debugging">Debugging & Troubleshooting</h2>
+<hr>
 
-  <h3 id="failures">Debugging Build Failures</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn -X</code> / <code>mvn --debug</code></td><td>Enables debug logging</td></tr>
-    <tr><td><code>mvn -e</code></td><td>Shows stack traces on errors</td></tr>
-    <tr><td><code>mvn -o</code></td><td>Works offline using only local dependencies</td></tr>
-  </table>
+<h2 id="Detailed Explanation of Each Directory">Detailed Explanation of Each Directory</h2>
 
-  <h3 id="skip-tests">Skipping Tests</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn -DskipTests</code></td><td>Skips test execution (still compiles tests)</td></tr>
-    <tr><td><code>mvn -Dmaven.test.skip=true</code></td><td>Skips test compilation and execution</td></tr>
-  </table>
+<h3 id="defaults">1. <code>defaults/main.yml</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Contains default variables for the role (lowest precedence)</li>
+  <li><strong>Use Case</strong>: Define default configurations that users can override</li>
+</ul>
+<pre><code># defaults/main.yml
+http_port: 80
+service_name: "nginx"
+</code></pre>
 
-  <h3 id="surefire">Debugging Surefire (Test Failures)</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn test -Dtest=MyTestClass</code></td><td>Runs a specific test class</td></tr>
-    <tr><td><code>mvn test -Dtest=MyTestClass#testMethod</code></td><td>Runs a specific test method</td></tr>
-    <tr><td><code>mvn test -Dmaven.surefire.debug</code></td><td>Debugs tests by suspending execution until a debugger is attached</td></tr>
-  </table>
+<h3 id="files">2. <code>files/</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Stores static files to be copied to remote hosts</li>
+  <li><strong>Use Case</strong>: Configuration files, scripts, or binaries that don't need templating</li>
+</ul>
+<pre><code># tasks/main.yml
+- name: Copy Nginx config
+  ansible.builtin.copy:
+    src: files/nginx.conf
+    dest: /etc/nginx/nginx.conf
+</code></pre>
 
-  <h3 id="plugins">Debugging Maven Plugins</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn &lt;plugin-prefix&gt;:&lt;goal&gt; -X</code></td><td>Debugs a specific plugin execution</td></tr>
-    <tr><td><code>mvn help:effective-pom</code></td><td>Shows the effective POM after inheritance and interpolation</td></tr>
-  </table>
+<h3 id="handlers">3. <code>handlers/main.yml</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Defines handlers (tasks triggered by <code>notify</code>)</li>
+  <li><strong>Use Case</strong>: Restart services after config changes</li>
+</ul>
+<pre><code># handlers/main.yml
+- name: Restart Nginx
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+</code></pre>
+<pre><code># tasks/main.yml
+- name: Update Nginx config
+  template:
+    src: templates/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: Restart Nginx
+</code></pre>
 
-  <h3 id="profiles">Profiles & Properties</h3>
-  <table>
-    <tr><th>Command</th><th>Description</th></tr>
-    <tr><td><code>mvn -PprofileName</code></td><td>Activates a Maven profile</td></tr>
-    <tr><td><code>mvn -DpropertyName=value</code></td><td>Sets a system property</td></tr>
-  </table>
+<h3 id="meta">4. <code>meta/main.yml</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Defines role metadata and dependencies</li>
+  <li><strong>Use Case</strong>: Specify role dependencies, supported platforms, and author info</li>
+</ul>
+<pre><code># meta/main.yml
+galaxy_info:
+  author: "Your Name"
+  description: "Nginx role"
+  license: "MIT"
+  platforms:
+    - name: "Ubuntu"
+      versions: ["20.04", "22.04"]
+dependencies: []
+</code></pre>
 
-  <h2 id="issues">Common Issues & Fixes</h2>
-  <table>
-    <tr><th>Issue</th><th>Fix</th></tr>
-    <tr><td>Dependency Conflicts</td><td><code>mvn dependency:tree -Dverbose</code></td></tr>
-    <tr><td>Build Hangs</td><td><code>mvn --threads 1</code> to run in single-threaded mode</td></tr>
-    <tr><td>Out of Memory</td><td>Set <code>MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"</code></td></tr>
-  </table>
+<h3 id="tasks">5. <code>tasks/main.yml</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Main task file executed when the role runs</li>
+  <li><strong>Use Case</strong>: Define the core automation steps</li>
+</ul>
+<pre><code># tasks/main.yml
+- name: Install Nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+</code></pre>
+
+<h3 id="templates">6. <code>templates/</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Stores Jinja2 templates (dynamic files with variables)</li>
+  <li><strong>Use Case</strong>: Config files that need variable substitution</li>
+</ul>
+<pre><code># templates/nginx.conf.j2
+server {
+    listen {{ http_port }};
+    server_name {{ server_name }};
+}
+</code></pre>
+<pre><code># tasks/main.yml
+- name: Configure Nginx
+  ansible.builtin.template:
+    src: templates/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+</code></pre>
+
+<h3 id="vars">7. <code>vars/main.yml</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Higher-priority variables (override <code>defaults/</code>)</li>
+  <li><strong>Use Case</strong>: Define role-specific variables that shouldn’t be changed</li>
+</ul>
+<pre><code># vars/main.yml
+nginx_user: www-data
+</code></pre>
+
+<h3 id="tests">8. <code>tests/</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Contains test playbooks and inventory</li>
+  <li><strong>Use Case</strong>: Verify role functionality with Molecule or manual tests</li>
+</ul>
+<pre><code># tests/test.yml
+- hosts: localhost
+  roles:
+    - role_name
+</code></pre>
+
+<h3 id="readme">9. <code>README.md</code></h3>
+<ul>
+  <li><strong>Purpose</strong>: Documents the role’s purpose, variables, and usage</li>
+  <li><strong>Use Case</strong>: Helps users understand how to use the role</li>
+</ul>
+<pre><code># Nginx Role
+Installs and configures Nginx.
+
+## Variables
+- `http_port`: Web server port (default: `80`)
+</code></pre>
+
+<hr>
+
+<h2 id="best-practices">Best Practices for Ansible Roles</h2>
+<ol>
+  <li><strong>Keep tasks modular</strong> – Split into separate files (<code>tasks/install.yml</code>, <code>tasks/config.yml</code>).</li>
+  <li><strong>Use <code>defaults/</code> for user-customizable variables</strong>.</li>
+  <li><strong>Use <code>vars/</code> for internal role variables</strong>.</li>
+  <li><strong>Document all variables</strong> in <code>README.md</code>.</li>
+  <li><strong>Test roles</strong> using Molecule or <code>tests/</code>.</li>
+</ol>
+
+<p>This structure ensures <strong>reusability</strong>, <strong>maintainability</strong>, and <strong>clarity</strong> in Ansible automation. 🚀</p>
 
 </body>
 </html>
+
+
 
 
 
@@ -146,6 +224,6 @@
 ## <h2 id="References">References</h2>
 | Links                                             | Descriptions                                                    |
 |---------------------------------------------------|-----------------------------------------------------------------|
-| https://www.digitalocean.com/community/tutorials/maven-commands-options-cheat-sheet | Document format followed from this link                         |
+| https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html#role-directory-structure | Document format followed from this link                         |
 
 
