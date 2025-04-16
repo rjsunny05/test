@@ -1,4 +1,6 @@
-
+| Author      | Created on  | Version    | Last updated by | Last edited on |
+|-------------|-------------|------------|-----------------|----------------|
+| Rajeev Ranjan    | 15-04-25    | version 1  | Rajeev Ranjan        |        |
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +43,24 @@ poetry --version
 
   <h2 id="Creating a New Project">Creating a New Project</h2>
   <pre><code># Create a new project (interactive)
-poetry new &lt;project-name&gt;
+poetry new poetry-demo
+
+
+
+<p>This will create the poetry-demo directory with the following content:</p>
+
+poetry-demo
+├── pyproject.toml
+├── README.md
+├── src
+│   └── poetry_demo
+│       └── __init__.py
+└── tests
+    └── __init__.py
+
+
+
+
 
 # Create with a specific Python version
 poetry env use python3.9  # Optional upfront
@@ -148,5 +167,15 @@ poetry config virtualenvs.path /path/to/venvs
 
 </body>
 </html>
+
+## Contact Information
+| Name         | Email address          |
+|--------------|------------------------|
+| Rajeev Ranjan          |     rajeevsunny05@gmail.com |
+
+## References
+| Links                                             | Descriptions                                                    |
+|---------------------------------------------------|-----------------------------------------------------------------|
+| https://python-poetry.org/docs/ | Document format followed from this link                         |
 
 
