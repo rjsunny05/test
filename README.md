@@ -170,12 +170,12 @@ poetry config virtualenvs.path /path/to/venvs
 </body>
 </html>
 
-<h2 id="Contact Information">Contact Information</h2>
+## <h2 id="Contact Information">Contact Information</h2>
 | Name         | Email address          |
 |--------------|------------------------|
 | Rajeev Ranjan          |     rajeevsunny05@gmail.com |
 
-References <h2 id="References">References</h2>
+## <h2 id="References">References</h2>
 | Links                                             | Descriptions                                                    |
 |---------------------------------------------------|-----------------------------------------------------------------|
 | https://python-poetry.org/docs/ | Document format followed from this link                         |
