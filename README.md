@@ -23,6 +23,8 @@
     <li><a href="#Configuration (Optional)">  Configuration (Optional)</a></li>
     <li><a href="#Best Practices"> Best Practices</a></li>
     <li><a href="#Troubleshooting"> Troubleshooting</a></li>
+    <li><a href="#Contact Information">Contact Information </a></li>
+    <li><a href="#References"> References</a></li>
     
 
 
@@ -168,12 +170,12 @@ poetry config virtualenvs.path /path/to/venvs
 </body>
 </html>
 
-## Contact Information
+<h2 id="Contact Information">Contact Information</h2>
 | Name         | Email address          |
 |--------------|------------------------|
 | Rajeev Ranjan          |     rajeevsunny05@gmail.com |
 
-## References
+References <h2 id="References">References</h2>
 | Links                                             | Descriptions                                                    |
 |---------------------------------------------------|-----------------------------------------------------------------|
 | https://python-poetry.org/docs/ | Document format followed from this link                         |
