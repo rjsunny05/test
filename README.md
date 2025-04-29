@@ -1,227 +1,127 @@
-![image](https://github.com/user-attachments/assets/e93e9988-17e8-43f8-8601-7acfcd679bfb)
 
 
 
 
-| Author      | Created on  | Version    | Last updated by | Last edited on |
-|-------------|-------------|------------|-----------------|----------------|
-| Rajeev Ranjan    | 16-04-25    | version 1  | Rajeev Ranjan        |        |
+
+| Author          | Created on | Version   | Last updated by | Last edited on | Internal Reviewer | L0     | L1      | L2     |
+|-----------------|------------|-----------|------------------|----------------|--------------------|--------|---------|--------|
+| Rajeev Ranjan | 17-04-25   | version 1 | N/A              | N/A            | Priyanshu          | Khushi | Mukul | Piyush |
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-</head>
-<body>
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Key Concept](#key-concept)
+     1. [Repositories](#repositories)
+     2. [Branches](#branches)
+     3. [Pull Request](#pull-requests)
+3. [Issues](#issues)
+4. [GitHub Actions](#github-actions)
+5. [gitignore](#gitignore)
+6. [Collaboration Tools](#collaboration-tools)
+7. [Conclusion](#conclusion)
+8. [Contacts Information](#contacts-information)
+9. [References](#references)
 
-<h2>Table of Contents</h2>
-<ul class="toc">
-  <li><a href="#structure">Standard Directory Structure</a></li>
-  <li><a href="#Detailed Explanation of Each Directory">Detailed Explanation of Each Directory</a></li>
-  <li>
-    <ul>
-      <li><a href="#defaults">1. defaults/main.yml</a></li>
-      <li><a href="#files">2. files/</a></li>
-      <li><a href="#handlers">3. handlers/main.yml</a></li>
-      <li><a href="#meta">4. meta/main.yml</a></li>
-      <li><a href="#tasks">5. tasks/main.yml</a></li>
-      <li><a href="#templates">6. templates/</a></li>
-      <li><a href="#vars">7. vars/main.yml</a></li>
-      <li><a href="#tests">8. tests/</a></li>
-      <li><a href="#readme">9. README.md</a></li>
-    </ul>
-  </li>
-  <li><a href="#best-practices">Best Practices</a></li>
-</ul>
+# GitHub Documentation
 
-<h1>Ansible Role Directory Structure Explained</h1>
+# Introduction
+GitHub is a web-based platform for version control and collaboration, allowing multiple developers to work on projects simultaneously. It is built around Git, a distributed version control system, and is widely used for hosting open-source and private code repositories.
 
-<p>An Ansible role provides a framework for organizing playbooks, variables, files, templates, and tasks in a standardized way. Here's a breakdown of the default directory structure and the purpose of each component:</p>
+---
 
+# Key Concept
 
+##  Repositories
+A **repository (repo)** is the fundamental unit in GitHub. It contains all the project files and the entire revision history. Repositories can be public or private, and users can **clone**, **fork**, or **contribute** to them.
 
+- **Clone**: Copies the repository to your local system.
+- **Fork**: Makes a copy under your account to experiment or contribute.
+- **README**: A default documentation file often used to describe the project.
 
-<h2 id="structure">Standard Ansible Role Directory Structure</h2>
-<pre><code>role_name/
-roles/
-    common/               # this hierarchy represents a "role"
-        tasks/            #
-            main.yml      #  <-- tasks file can include smaller files if warranted
-        handlers/         #
-            main.yml      #  <-- handlers file
-        templates/        #  <-- files for use with the template resource
-            ntp.conf.j2   #  <------- templates end in .j2
-        files/            #
-            bar.txt       #  <-- files for use with the copy resource
-            foo.sh        #  <-- script files for use with the script resource
-        vars/             #
-            main.yml      #  <-- variables associated with this role
-        defaults/         #
-            main.yml      #  <-- default lower priority variables for this role
-        meta/             #
-            main.yml      #  <-- role dependencies
-        library/          # roles can also include custom modules
-        module_utils/     # roles can also include custom module_utils
-        lookup_plugins/   # or other types of plugins, like lookup in this case
+##  Branches
+**Branches** allow you to diverge from the main codebase to work on new features or fixes without affecting the main project (usually `main` or `master` branch).
 
-    webtier/              # same kind of structure as "common" was above, done for the webtier role
-    monitoring/           # ""
-    fooapp/               # ""
-</code></pre>
+- Common use: Feature development, bug fixes.
+- **Default branch** is usually the main production code.
+- You can merge branches back into the main branch after changes are tested.
+![image](https://d8it4huxumps7.cloudfront.net/uploads/images/6536475adca0a_git_create_branch_01.jpg?d=2000x2000)
 
-<hr>
+- **Main Branch**:
+The default branch where the final, stable version of the code resides.
 
-<h2 id="Detailed Explanation of Each Directory">Detailed Explanation of Each Directory</h2>
+- **Feature Branches**:
+Branches are created from the main branch to work on specific features, bug fixes, or tasks without impacting the main codebase.
 
-<h3 id="defaults">1. <code>defaults/main.yml</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Contains default variables for the role (lowest precedence)</li>
-  <li><strong>Use Case</strong>: Define default configurations that users can override</li>
-</ul>
-<pre><code># defaults/main.yml
-http_port: 80
-service_name: "nginx"
-</code></pre>
+##  Pull Requests
+A **Pull Request (PR)** is a request to merge code from one branch into another, typically reviewed by collaborators.
 
-<h3 id="files">2. <code>files/</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Stores static files to be copied to remote hosts</li>
-  <li><strong>Use Case</strong>: Configuration files, scripts, or binaries that don't need templating</li>
-</ul>
-<pre><code># tasks/main.yml
-- name: Copy Nginx config
-  ansible.builtin.copy:
-    src: files/nginx.conf
-    dest: /etc/nginx/nginx.conf
-</code></pre>
+- Includes **code review**, **comments**, and **approval workflows**.
+- Can trigger automated tests or workflows (via GitHub Actions).
+- Promotes peer review and ensures code quality.
 
-<h3 id="handlers">3. <code>handlers/main.yml</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Defines handlers (tasks triggered by <code>notify</code>)</li>
-  <li><strong>Use Case</strong>: Restart services after config changes</li>
-</ul>
-<pre><code># handlers/main.yml
-- name: Restart Nginx
-  ansible.builtin.service:
-    name: nginx
-    state: restarted
-</code></pre>
-<pre><code># tasks/main.yml
-- name: Update Nginx config
-  template:
-    src: templates/nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
-  notify: Restart Nginx
-</code></pre>
+---
 
-<h3 id="meta">4. <code>meta/main.yml</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Defines role metadata and dependencies</li>
-  <li><strong>Use Case</strong>: Specify role dependencies, supported platforms, and author info</li>
-</ul>
-<pre><code># meta/main.yml
-galaxy_info:
-  author: "Your Name"
-  description: "Nginx role"
-  license: "MIT"
-  platforms:
-    - name: "Ubuntu"
-      versions: ["20.04", "22.04"]
-dependencies: []
-</code></pre>
+#  Issues
+GitHub **Issues** are used to track bugs, feature requests, tasks, and improvements.
 
-<h3 id="tasks">5. <code>tasks/main.yml</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Main task file executed when the role runs</li>
-  <li><strong>Use Case</strong>: Define the core automation steps</li>
-</ul>
-<pre><code># tasks/main.yml
-- name: Install Nginx
-  ansible.builtin.apt:
-    name: nginx
-    state: present
-</code></pre>
+- Users can label, assign, and prioritize issues.
+- Can be linked to commits and pull requests.
+- Supports templates for consistency.
+- Supports closing issues via commit messages (`Fixes #123`).
 
-<h3 id="templates">6. <code>templates/</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Stores Jinja2 templates (dynamic files with variables)</li>
-  <li><strong>Use Case</strong>: Config files that need variable substitution</li>
-</ul>
-<pre><code># templates/nginx.conf.j2
-server {
-    listen {{ http_port }};
-    server_name {{ server_name }};
-}
-</code></pre>
-<pre><code># tasks/main.yml
-- name: Configure Nginx
-  ansible.builtin.template:
-    src: templates/nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
-</code></pre>
+---
 
-<h3 id="vars">7. <code>vars/main.yml</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Higher-priority variables (override <code>defaults/</code>)</li>
-  <li><strong>Use Case</strong>: Define role-specific variables that shouldn’t be changed</li>
-</ul>
-<pre><code># vars/main.yml
-nginx_user: www-data
-</code></pre>
+#  GitHub Actions
+**GitHub Actions** is GitHub’s built-in CI/CD tool that helps automate workflows.
 
-<h3 id="tests">8. <code>tests/</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Contains test playbooks and inventory</li>
-  <li><strong>Use Case</strong>: Verify role functionality with Molecule or manual tests</li>
-</ul>
-<pre><code># tests/test.yml
-- hosts: localhost
-  roles:
-    - role_name
-</code></pre>
+- Automates tests, deployments, and code linting.
+- Uses YAML files stored in `.github/workflows/`.
+- Supports custom actions and marketplace integrations.
+- Triggered on push, pull requests, or scheduled times.
 
-<h3 id="readme">9. <code>README.md</code></h3>
-<ul>
-  <li><strong>Purpose</strong>: Documents the role’s purpose, variables, and usage</li>
-  <li><strong>Use Case</strong>: Helps users understand how to use the role</li>
-</ul>
-<pre><code># Nginx Role
-Installs and configures Nginx.
+---
 
-## Variables
-- `http_port`: Web server port (default: `80`)
-</code></pre>
+#  .gitignore
+The `.gitignore` file tells Git which files/folders to ignore in version control.
 
-<hr>
+- Common for excluding compiled code, temporary files, secrets.
+- Each language/project has standard `.gitignore` templates.
+- Prevents sensitive or unnecessary files from being tracked.
 
-<h2 id="best-practices">Best Practices for Ansible Roles</h2>
-<ol>
-  <li><strong>Keep tasks modular</strong> – Split into separate files (<code>tasks/install.yml</code>, <code>tasks/config.yml</code>).</li>
-  <li><strong>Use <code>defaults/</code> for user-customizable variables</strong>.</li>
-  <li><strong>Use <code>vars/</code> for internal role variables</strong>.</li>
-  <li><strong>Document all variables</strong> in <code>README.md</code>.</li>
-  <li><strong>Test roles</strong> using Molecule or <code>tests/</code>.</li>
-</ol>
+Example:
 
-<p>This structure ensures <strong>reusability</strong>, <strong>maintainability</strong>, and <strong>clarity</strong> in Ansible automation. 🚀</p>
+node_modules/
+.env
+*.log
 
-</body>
-</html>
+#  Collaboration Tools
+GitHub provides several tools to support team collaboration:
+
+- **Code Review**: In-line comments on pull requests.
+- **Project Boards**: Kanban-style boards for task tracking.
+- **Wikis**: For project documentation.
+- **Discussions**: Community Q&A within repositories.
+- **Notifications**: Email and in-app alerts for updates and mentions.
+- **Teams & Permissions**: Granular access control for organizations.
+
+---
+
+#  Conclusion
+GitHub is a comprehensive platform for code versioning, project management, and team collaboration. It empowers developers to work efficiently, automate processes, and maintain code quality. Its features like pull requests, issues, and GitHub Actions make it suitable for individual projects as well as enterprise-level development.
 
 
 
 
 
 
-## <h2 id="Contact Information">Contact Information</h2>
+
+
+## Contacts Information
 | Name         | Email address          |
 |--------------|------------------------|
 | Rajeev Ranjan          |     rajeevsunny05@gmail.com |
 
-## <h2 id="References">References</h2>
+## References
 | Links                                             | Descriptions                                                    |
 |---------------------------------------------------|-----------------------------------------------------------------|
 | https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html#role-directory-structure | Document format followed from this link                         |
