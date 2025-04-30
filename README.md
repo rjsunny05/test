@@ -1,4 +1,4 @@
-
+![image](https://i.ytimg.com/vi/ptK9-CNms98/maxresdefault.jpg)
 
 
 
@@ -78,6 +78,7 @@ GitHub **Issues** are used to track bugs, feature requests, tasks, and improveme
 - Uses YAML files stored in `.github/workflows/`.
 - Supports custom actions and marketplace integrations.
 - Triggered on push, pull requests, or scheduled times.
+![Screenshot 2024-11-21 130820](https://github.com/user-attachments/assets/225b811c-fd99-478a-b15e-b93474aff022)
 
 ---
 
@@ -124,6 +125,6 @@ GitHub is a comprehensive platform for code versioning, project management, and 
 ## References
 | Links                                             | Descriptions                                                    |
 |---------------------------------------------------|-----------------------------------------------------------------|
-| https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html#role-directory-structure | Document format followed from this link                         |
+| https://www.simplilearn.com/tutorials/git-tutorial/what-is-github | Document format followed from this link                         |
 
 
