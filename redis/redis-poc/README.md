@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-1. [Redis](#redis)  
+1. [What is Redis](#what-is-redis)  
 2. [Pre-requisites](#pre-requisites)  
 3. [Software Overview](#software-overview)  
 4. [System Requirements](#system-requirements)  
@@ -28,11 +28,10 @@
 7. [Contact Information](#contact-information)  
 8. [References](#references)
 
-## REDIS
+## What is Redis
 
 The purpose of this POC is to evaluate Redis as a caching solution for the application, testing its performance, scalability, and integration capabilities.
-
-
+To read more about redis you can take a look on this documentation [redis](link)
 
 ## Pre-requisites
 
@@ -158,7 +157,10 @@ After authenticating, you can test the connection by running a simple command PI
 PING
 ```
 If you see PONG, it means authentication was successful.
-![Image](https://github.com/user-attachments/assets/40ceabe3-4126-464f-b1ce-aefd72397400)
+
+![Image](https://github.com/user-attachments/assets/14a8ab9a-c207-4258-8d14-e83879d19883)
+
+
 
 
 ### Contact Information
