@@ -79,7 +79,7 @@ To install Redis, use the apt package manager
 ``` bash
 sudo apt install redis-server -y
 ```
-![Screenshot 2024-11-12 080435](https://github.com/user-attachments/assets/711e4bfe-df01-443e-97d8-2a9b52678f6f)
+![Image](https://github.com/user-attachments/assets/72b89f48-3c59-49f7-9081-2488a7458c89)
 
 ### Step 3: Start Redis Service
 Run the following command to start the Redis service:
@@ -94,7 +94,7 @@ To confirm that Redis has started successfully, use the following command:
 ``` bash
 sudo systemctl status redis-server
 ```
-![Screenshot 2024-11-12 080608](https://github.com/user-attachments/assets/44b35826-c133-466b-a9c4-d7837b35012e)
+![Image](https://github.com/user-attachments/assets/9f869f9d-c3fa-449b-ace3-19ce867c1fae)
 
 ### Step 5. Stop Redis Service
 To stop the Redis service, run:
@@ -127,6 +127,8 @@ user <user_name> on ><your_password> ~* +@all
 - *~* allows access to all keys*
 - *+@all grants full command permissions to this user*
 
+![Image](https://github.com/user-attachments/assets/624470a9-81fb-4263-b858-5871dcc28a42)
+
 #### 4. Save and Close the file.
 
 #### 5. Restart Redis
@@ -135,7 +137,7 @@ To apply these changes, restart the Redis service:
 ``` bash
 sudo systemctl restart redis
 ```
-![Screenshot 2024-11-12 080913](https://github.com/user-attachments/assets/6b42f8fb-36c4-4074-8df8-3f99b2806581)
+
 
 #### 6. Connect to Redis with Username and Password
 Now, you can authenticate to Redis using both a username and password.
@@ -146,7 +148,7 @@ Start the Redis CLI:
 redis-cli
 AUTH <user_name> <your_password>
 ```
-![Screenshot 2024-11-12 081120](https://github.com/user-attachments/assets/384944e8-bbba-488b-ab4a-c583fe6c33f9)
+![Image](https://github.com/user-attachments/assets/9ab592a9-3015-47ab-8d7a-17f48ef93f52)
 
 
 #### 7. Verify the Connection: 
@@ -156,7 +158,7 @@ After authenticating, you can test the connection by running a simple command PI
 PING
 ```
 If you see PONG, it means authentication was successful.
-![Screenshot 2024-11-12 081219](https://github.com/user-attachments/assets/ffffcdcd-7f95-4f15-b7e0-ea175aa57b72)
+![Image](https://github.com/user-attachments/assets/40ceabe3-4126-464f-b1ce-aefd72397400)
 
 
 ### Contact Information
