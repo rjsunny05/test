@@ -6,49 +6,62 @@
 
 ## Table of Contents
 
-1. [Introduction](#redis)
-2. [Redis Setup Prerequisites](#redis-setup-prerequisites)
-3. [Redis Installation on Ubuntu](#redis-installation-on-ubuntu)
-    - [Step 1: Update System Packages](#step-1-update-system-packages)
-    - [Step 2: Install Redis](#step-2-install-redis)
-    - [Step 3: Start Redis Service](#step-3-start-redis-service)
-    - [Step 4: Check Redis Service Status](#step-4-check-redis-service-status)
-    - [Step 5: Stop Redis Service](#step-5-stop-redis-service)
-    - [Step 6: Configure Redis](#step-6-configure-redis)
-        - [1. Open the Redis Configuration File](#1-open-the-redis-configuration-file)
-        - [2. Set a Password](#2-set-a-password)
-        - [3. (Optional) Configure a Username](#3-optional-configure-a-username)
-        - [4. Save and Close the File](#4-save-and-close-the-file)
-        - [5. Restart Redis](#5-restart-redis)
-        - [6. Connect to Redis with Username and Password](#6-connect-to-redis-with-username-and-password)
-        - [7. Verify the Connection](#7-verify-the-connection)
-4. [Contact Information](#contact-information)
-5. [References](#references)
-
+1. [Redis](#redis)  
+2. [Pre-requisites](#pre-requisites)  
+3. [Software Overview](#software-overview)  
+4. [System Requirements](#system-requirements)  
+5. [Important Ports](#important-ports)  
+6. [Redis Installation on Ubuntu](#redis-installation-on-ubuntu)  
+    - [Step 1: Update System Packages](#step-1-update-system-packages)  
+    - [Step 2: Install Redis](#step-2-install-redis)  
+    - [Step 3: Start Redis Service](#step-3-start-redis-service)  
+    - [Step 4: Check Redis Service Status](#step-4-check-redis-service-status)  
+    - [Step 5: Stop Redis Service](#step-5-stop-redis-service)  
+    - [Step 6: Configure Redis](#step-6-configure-redis)  
+        - [1. Open the Redis configuration file](#1-open-the-redis-configuration-file)  
+        - [2. Set a Password](#2-set-a-password)  
+        - [3. Optional: Configure a Username](#3-configure-a-username) 
+        - [4. Save and Close the file](#4-save-and-close-the-file) 
+        - [5. Restart Redis](#5-restart-redis)  
+        - [6. Connect to Redis with Username and Password](#6-connect-to-redis-with-username-and-password)  
+        - [7. Verify the Connection](#7-verify-the-connection)  
+7. [Contact Information](#contact-information)  
+8. [References](#references)
 
 ## REDIS
 
 The purpose of this POC is to evaluate Redis as a caching solution for the application, testing its performance, scalability, and integration capabilities.
 
-## Hardware Pre-requisites
 
-| **Requirement**        | **Details**                  |
-|------------------------|------------------------------|
-| **OS**                 | Ubuntu or other Linux-based OS |
-| **RAM**                | 2 GB minimum                 |
-| **Disk Space**         | 100 MB or more               |
-| **Processor**          | Dual-core recommended        |
-| **Network**            | Port 6379 open               |
-| **Redis Version**      | 6.x or higher recommended    |
+
+## Pre-requisites
+
+Before diving into the Installation of scyllaDB, let’s ensure the following prerequisites meet as its requirements.
+
+## Software Overview
+|                  |         |
+|:----------------:|:-------:|
+| **Software Name:**| Redis|
+|**Version:**| 6.x or higher recommended|
+
+## System Requirements
+| **Requirements** | **Details** |
+|---------|---------|
+| OS |  Ubuntu 22.4 |
+| Vm type | t2 micro |
+| Disk space | 100 MB or more |
+
+## Important Ports
+
+| Port | Description      |
+| :--- | :--------------- |
+| 6379 | Used by Redis |
 
 ## Redis Installation on Ubuntu
 
 This guide provides the steps to install and configure Redis on Ubuntu.
 
-## Prerequisites
 
-- Ubuntu 20.04 or later
-- A user with `sudo` privileges
 
 ## Installation Steps
 
@@ -83,7 +96,7 @@ sudo systemctl status redis-server
 ```
 ![Screenshot 2024-11-12 080608](https://github.com/user-attachments/assets/44b35826-c133-466b-a9c4-d7837b35012e)
 
-### 5. Stop Redis Service
+### Step 5. Stop Redis Service
 To stop the Redis service, run:
 
 ``` bash
@@ -103,7 +116,7 @@ Find the line with # requirepass foobared and replace it with:
 requirepass <your_password_here>
 ```
 
-#### 3.(Optional) Configure a Username:
+#### 3. Configure a Username: 
 For Redis 6.x and above, you can set up a username with Access Control Lists (ACLs). Add this to the redis.conf file:
 
 ``` bash
@@ -116,7 +129,7 @@ user <user_name> on ><your_password> ~* +@all
 
 #### 4. Save and Close the file.
 
- #### 5.Restart Redis
+#### 5. Restart Redis
 To apply these changes, restart the Redis service:
 
 ``` bash
