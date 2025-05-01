@@ -1,9 +1,9 @@
-
+# GitLab Flow Documentation
 
 
 | Author          | Created on | Version   | Last updated by | Last edited on | Internal Reviewer | L0     | L1      | L2     |
 |-----------------|------------|-----------|------------------|----------------|--------------------|--------|---------|--------|
-| Rajeev Ranjan | 17-04-25   | version 1 | N/A              | N/A            | Priyanshu          | Khushi Malhotra | Mukul Joshi| Piyush Upadhyay|
+| Rajeev Ranjan | 01-05-25   | version 1 | N/A              | N/A            | Priyanshu          | Khushi Malhotra | Mukul Joshi| Piyush Upadhyay|
 
 
 
@@ -13,10 +13,11 @@
 3. [GitLab Flow](#gitlab-flow) 
 4. [Why GitLab Flow](#why-gitlab-flow)
 5. [Advantages of GitLab Flow](#advantages-of-gitlab-flow)
-6. [Disadvantages of GitLab Flow](#disadvantages-of-gitlab)
-7. [Conclusion](#conclusion)
-8. [Contact Information](#contact-information)
-9. [References](#references)
+6. [Disadvantages of GitLab Flow](#disadvantages-of-gitlab-flow)
+7. [Best Practices](#best-practices)
+8. [Conclusion](#conclusion)
+9. [Contact Information](#contact-information)
+10. [References](#references)
 ---
 
 ## Introduction
@@ -73,6 +74,23 @@ GitLab Flow aims to simplify the development process by combining the best aspec
 |Complexity for Small Teams|	May introduce unnecessary complexity for smaller teams or simple projects.|
 |Learning Curve	|Requires time to learn best practices for teams unfamiliar with GitLab or branching workflows.|
 |Integration Overhead	|Integrating with existing tools and workflows may require additional effort.|
+
+### Best Practices
+
+| **Best Practice**                     | **Description**                                                                                   |
+|--------------------------------------|---------------------------------------------------------------------------------------------------|
+| Always Create a Branch            | Work on a feature/bugfix branch; never directly on `main`.                                       |
+| Commit Often and Meaningfully     | Make small, focused commits with clear messages.                                                  |
+| Open Pull Requests Early          | Use PRs for collaboration and feedback; consider using Draft PRs.                                |
+| Review Before Merging             | Ensure code is reviewed by at least one other team member.                                       |
+| Run CI/CD Pipelines               | Automate testing and checks using GitHub Actions, Jenkins, etc.                                  |
+| Keep the Main Branch Deployable   | `main` should always be in a releasable state; use feature flags if needed.                      |
+| Use Squash or Rebase Merges       | Squash to keep history clean, or rebase to maintain a linear history.                            |
+| Delete Merged Branches            | Remove feature branches after merge to avoid clutter.                                             |
+|  Automate PR Templates             | Use templates to enforce consistency (description, issue link, checklist, etc.).                 |
+| Tag and Release Often             | Use semantic versioning and automate release processes for tracking deployments.                 |
+
+
 
 ---
  ### Conclusion
