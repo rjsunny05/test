@@ -12,19 +12,6 @@
 4. [System Requirements](#system-requirements)  
 5. [Important Ports](#important-ports)  
 6. [Redis Installation on Ubuntu](#redis-installation-on-ubuntu)  
-    - [Step 1: Update System Packages](#step-1-update-system-packages)  
-    - [Step 2: Install Redis](#step-2-install-redis)  
-    - [Step 3: Start Redis Service](#step-3-start-redis-service)  
-    - [Step 4: Check Redis Service Status](#step-4-check-redis-service-status)  
-    - [Step 5: Stop Redis Service](#step-5-stop-redis-service)  
-    - [Step 6: Configure Redis](#step-6-configure-redis)  
-        - [1. Open the Redis configuration file](#1-open-the-redis-configuration-file)  
-        - [2. Set a Password](#2-set-a-password)  
-        - [3. Optional: Configure a Username](#3-configure-a-username) 
-        - [4. Save and Close the file](#4-save-and-close-the-file) 
-        - [5. Restart Redis](#5-restart-redis)  
-        - [6. Connect to Redis with Username and Password](#6-connect-to-redis-with-username-and-password)  
-        - [7. Verify the Connection](#7-verify-the-connection)  
 7. [Contact Information](#contact-information)  
 8. [References](#references)
 
@@ -176,4 +163,4 @@ If you see PONG, it means authentication was successful.
 |---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | [Redis Documentation - Linux Installation](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/) | Document format followed from this link.                 |
 | [Introduction vs. Overview](https://backendless.com/redis-what-it-is-what-it-does-and-why-you-should-care/) | This link explains the difference between Overview & Introduction. |
-| [Redis Documentation - GitHub](https://github.com/avengers-p11/Documentation/tree/main/OT%20MS%20Understanding/Redis/Redis%20Documentation) | Link to Redis documentation on GitHub.           
+| [Redis Documentation - GitHub](https://github.com/avengers-p11/Documentation/tree/main/OT%20MS%20Understanding/Redis/Redis%20Documentation) | Link to Redis documentation on GitHub. 
