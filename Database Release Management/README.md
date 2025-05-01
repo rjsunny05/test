@@ -1,3 +1,4 @@
+# Database Release Management | Intro & Understanding
 
 
 | Author          | Created on | Version   | Last updated by | Last edited on | Internal Reviewer | L0     | L1      | L2     |
@@ -85,5 +86,7 @@ Database release management is the process of planning, tracking, and deploying 
 | Links                                             | Descriptions                                                    |
 |---------------------------------------------------|-----------------------------------------------------------------|
 | https://www.red-gate.com/simple-talk/devops/database-devops/database-lifecycle-management-deployment-and-release/ | Document format followed from this link      |
+
+
 
 
