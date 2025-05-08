@@ -6,30 +6,30 @@
 
 | Author      | Created on  | Version    | Last updated by | Last edited on | Internal reviewer |   L0     |    L1     |    L2   |
 |-------------|-------------|------------|-----------------|----------------|-------------------|----------|-----------|-----------|
-| Rajeev Ranjan    | 15-04-25    | version 1  | N/A        |     N/A   |     Priyanshu         | Khushi   | Mukul      | Piyush   |  
+| Rajeev Ranjan    |     | version 1  | N/A        |     N/A   |     Priyanshu         | Khushi Malhotra  | Mukul Joshi     | Piyush Upadhyay  |  
 
 ## Table Of Contents
-- [Introduction](#introduction)
-- [Why License Scanning?](#why-license-scanning)
-- [License Scanning Tools](#license-scanning-tools)
-- [Tool Comparison](#tool-comparison)
-- [Tool Recommendation](#tool-recommendation)
-- [Advantages and Disadvantages](#advantages-and-disadvantages)
-- [Best Practices](#best-practices)
-- [Conclusion](#conclusion)
-- [Contact Information](#contact-information)
-- [References](#references)
+ 1. [Introduction](#1-introduction)
+ 2. [Why License Scanning?](#2-why-license-scanning)
+ 3. [License Scanning Tools](#3-license-scanning-tools)
+ 4. [Tool Comparison](#4-tool-comparison)
+ 5. [Tool Recommendation](#5-tool-recommendation)
+ 6. [Advantages and Disadvantages](#6-advantages-and-disadvantages)
+ 7. [Best Practices](#7-best-practices)
+ 8. [[Conclusion](#8-conclusion)
+ 9. [Contacts Information](#9-contacts-information)
+ 10. [References](#10-references)
 
 ---
 
-## Introduction
- License scanning is a critical process in software development that ensures compliance with open-source and third-party licenses. It involves identifying, tracking, and managing licenses associated with dependencies used in a project.
+## 1. Introduction
+- License scanning is a critical process in software development that ensures compliance with open-source and third-party licenses. It involves identifying, tracking, and managing licenses associated with dependencies used in a project.
 
-Integrating license scanning into Continuous Integration (CI) pipelines automates compliance checks, reducing legal risks and ensuring adherence to licensing obligations. This documentation provides a comprehensive guide on implementing license scanning in CI workflows.
+- Integrating license scanning into Continuous Integration (CI) pipelines automates compliance checks, reducing legal risks and ensuring adherence to licensing obligations. This documentation provides a comprehensive guide on implementing license scanning in CI workflows.
 
 ---
 
-## Why License Scanning?
+## 2. Why License Scanning?
 
 - **Legal Compliance:** Avoid violations of open-source licenses (e.g., GPL, MIT, Apache).
 
@@ -42,7 +42,7 @@ Integrating license scanning into Continuous Integration (CI) pipelines automate
 - **CI/CD Integration:** Automate checks to catch issues early in development.
 
 ---
-## License Scanning Tools
+## 3. License Scanning Tools
 
 | Tool             | Description                                                                 |
 |-------------------|-----------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Integrating license scanning into Continuous Integration (CI) pipelines automate
 ---
 
 
-## Tool Comparison
+## 4. Tool Comparison
 
 | Feature / Aspect          | FOSSA                                             | Black Duck                                          | FOSSology                                          |
 |---------------------------|---------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
@@ -74,8 +74,8 @@ Integrating license scanning into Continuous Integration (CI) pipelines automate
    
 
 
-## Tool Recommendation
-- **FOSSA** is recommended due to:
+## 5. Tool Recommendation
+**FOSSA** is recommended due to:
 
 | Feature                        | Description                                                                     |
 |--------------------------------|---------------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ Integrating license scanning into Continuous Integration (CI) pipelines automate
 | **User-Friendly Interface**    | Easy navigation and seamless integration with CI/CD tools.                     |
 | **Continuous Monitoring**      | Tracks and monitors changes in licenses over time for proactive compliance.    |
 
-## Advantages and Disadvantages
+## 6. Advantages and Disadvantages
 
 | **Advantages**                                      | **Disadvantages**                                   |
 |-----------------------------------------------------|----------------------------------------------------|
@@ -100,7 +100,7 @@ Integrating license scanning into Continuous Integration (CI) pipelines automate
 
 ---
 
-## Best Practices
+## 7. Best Practices
 
 | **Best Practice**           | **Description**                                                                       |
 |-----------------------------|---------------------------------------------------------------------------------------|
@@ -113,12 +113,12 @@ Integrating license scanning into Continuous Integration (CI) pipelines automate
 
 ---
 
-## Conclusion
+## 8. Conclusion
 License scanning in CI ensures legal compliance and reduces risks. Automating this process improves efficiency and security while maintaining transparency in software development.
 
 ---
 
-## Contacts
+## 9. Contacts Information
 
 | Name| Email Address      |
 |-----|--------------------------|
@@ -128,7 +128,7 @@ License scanning in CI ensures legal compliance and reduces risks. Automating th
 
 ---
 
-## References
+## 10. References
 
 | Tool        | Link                                                                   |
 |-------------|------------------------------------------------------------------------|
