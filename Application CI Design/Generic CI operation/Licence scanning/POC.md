@@ -12,7 +12,7 @@
 
 1. [Pre-requisites](#1-Pre-requisites)
 2. [Setup and Configuration](#2-Setup-and-Configuration)
-3. [FOSSA in all three api (attedance-api, employee-api and salary-api) ](#3-FOSSA-in-all-three-api "attedance-api, employee-api and salary-api")
+3. [FOSSA in all three api (attedance-api, employee-api and salary-api) ](#3-FOSSA-in-all-three-api-attedance-api-employee-api-and-salary-api")
 4. [Contacts Information](#4-contacts-information)
 5. [References](#5-references)
 
