@@ -6,12 +6,13 @@
 | Rajeev Ranjan    |     | version 1  | N/A        |     N/A   |     Priyanshu         | Khushi Malhotra  | Mukul Joshi     | Piyush Upadhyay  | 
 
 
-## Table Of Contents
- 1. [Pre-requisites](#1-Pre-requisites)
- 2. [Setup and Configuration](#2-Setup-and-Configuration)
- 3. [FOSSA in all three api (attedance-api, employee-api and salary-api) ](FOSSA-in-all-three-api (attedance-api, employee-api and salary-api))
- 4. [Contacts Information](#4-contacts-information)
- 5. [References](#5-references)
+## Table of Contents  
+1. [Pre-requisites](#pre-requisites)  
+2. [Setup and Configuration](#setup-and-configuration)  
+3. [FOSSA in All Three APIs (attendance-api, employee-api, and salary-api)](#fossa-in-all-three-apis-attendance-api-employee-api-and-salary-api)  
+4. [Contact Information](#contact-information)  
+5. [References](#references)  
+
 
 
 
