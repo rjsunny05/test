@@ -16,7 +16,7 @@
  5. [Tool Recommendation](#5-tool-recommendation)
  6. [Advantages and Disadvantages](#6-advantages-and-disadvantages)
  7. [Best Practices](#7-best-practices)
- 8. [[Conclusion](#8-conclusion)
+ 8. [Conclusion](#8-conclusion)
  9. [Contacts Information](#9-contacts-information)
  10. [References](#10-references)
 
@@ -42,6 +42,11 @@
 - **CI/CD Integration:** Automate checks to catch issues early in development.
 
 ---
+
+## 3. Workflow Diagram
+
+
+
 ## 3. License Scanning Tools
 
 | Tool             | Description                                                                 |
