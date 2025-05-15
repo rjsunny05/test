@@ -7,8 +7,8 @@
 
 ## Table of Contents
 - [Introduction](#1-introduction)
-- [What are Jenkins Monitoring Metrics?](#2-what-are-jenkins-monitoring-metrics?)
-- [Why Monitor Jenkins?](#3-Why-Monitor-Jenkins?)
+- [What are Jenkins Monitoring Metrics?](#2-what-are-jenkins-monitoring-metrics)
+- [Why Monitor Jenkins?](#3-why-monitor-jenkins)
 - [Types of Jenkins Metrics](#types-of-jenkins-metrics)
 - [Tools for Monitoring Jenkins](#tools-for-monitoring-jenkins)
 - [Conclusion](#conclusion)
