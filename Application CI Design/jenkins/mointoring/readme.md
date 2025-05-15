@@ -67,7 +67,7 @@ Monitoring Jenkins helps to:
 
 ---
 
-# 6. Conclusion
+## 6. Conclusion
 
 In our OT microservice project, Jenkins monitoring metrics ensure smooth CI/CD pipeline operations by tracking build times, executor usage, and resource performance. Tools like Prometheus, Grafana, and ELK stack provide real-time insights, helping us optimize processes, troubleshoot issues, and maintain system reliability, leading to faster, more efficient microservice deployments.
 
