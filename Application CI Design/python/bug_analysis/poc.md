@@ -1,5 +1,4 @@
 # Bug Analysis in Python | POC
-## Description of this POC 
 
 
 | Author      | Created on  | Version    | Last updated by | Last edited on | Internal reviewer |   L0     |    L1     |    L2   |
@@ -125,9 +124,8 @@ Navigate to `Manage Jenkins` > `Global Tool Configuration`.
 
 ## Report
 
-![Screenshot 2025-05-15 140302](https://github.com/user-attachments/assets/8464c533-53c4-42bf-8cd6-0628c4aa5b49)
+![Screenshot 2025-05-15 191607](https://github.com/user-attachments/assets/087a5773-6692-4b52-839f-ce0e43ab234f)
 
-![Screenshot 2025-05-15 140319](https://github.com/user-attachments/assets/c1fea408-5ac1-400d-9849-788a6443fbd9)
 
 
 
