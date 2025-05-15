@@ -9,11 +9,11 @@
 - [Introduction](#1-introduction)
 - [What are Jenkins Monitoring Metrics?](#2-what-are-jenkins-monitoring-metrics)
 - [Why Monitor Jenkins?](#3-why-monitor-jenkins)
-- [Types of Jenkins Metrics](#types-of-jenkins-metrics)
-- [Tools for Monitoring Jenkins](#tools-for-monitoring-jenkins)
-- [Conclusion](#conclusion)
-- [Contacts](#contacts)
-- [References](#references)
+- [Types of Jenkins Metrics](#4-types-of-jenkins-metrics)
+- [Tools for Monitoring Jenkins](#5-tools-for-monitoring-jenkins)
+- [Conclusion](#6-conclusion)
+- [Contacts](#7-contacts)
+- [References](#8-references)
 
 
 ## 1. Introduction
@@ -41,7 +41,7 @@ Monitoring Jenkins helps to:
 
 ---
 
-## Types of Jenkins Metrics
+## 4. Types of Jenkins Metrics
 
 | **Metric Type**       | **Description**                                                               | **Examples**                                                                                  |
 |------------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Monitoring Jenkins helps to:
 |
 
 ---
-## Tools for Monitoring Jenkins
+## 5. Tools for Monitoring Jenkins
 
 | **Tool**                  | **Description**                                                                                   | **Key Metrics/Features**                                                      |
 |---------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -67,18 +67,18 @@ Monitoring Jenkins helps to:
 
 ---
 
-# Conclusion
+# 6. Conclusion
 
 In our OT microservice project, Jenkins monitoring metrics ensure smooth CI/CD pipeline operations by tracking build times, executor usage, and resource performance. Tools like Prometheus, Grafana, and ELK stack provide real-time insights, helping us optimize processes, troubleshoot issues, and maintain system reliability, leading to faster, more efficient microservice deployments.
 
-## Contacts
+## 7. Contacts
 
 | Name| Email Address      |
 |-----|--------------------------|
 | Rajeev Ranjan          |     rajeev.rajan.snaatak@mygurukulam.co |
 
 
-## References
+## 8. References
 
 | Title                                     | Link                                                                 |
 |-------------------------------------------|----------------------------------------------------------------------|
