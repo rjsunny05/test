@@ -1,6 +1,7 @@
 # SonarQube Disaster Recovery
 
-  ![image](https://github.com/user-attachments/assets/47ba734c-0e6a-4091-a5a8-fcb710610b93)
+![Screenshot 2025-05-15 192714](https://github.com/user-attachments/assets/4d3d9025-88b8-42aa-9a6e-cbabea7046fe)
+
 
  | Author      | Created on  | Version    | Last updated by | Last edited on | Internal reviewer |   L0     |    L1     |    L2   |
 |-------------|-------------|------------|-----------------|----------------|-------------------|----------|-----------|-----------|
