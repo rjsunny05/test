@@ -5,14 +5,23 @@
 | Rajeev Ranjan    |     | version 1  | N/A        |     N/A   |     Priyanshu         | Khushi Malhotra  | Mukul Joshi     | Piyush Upadhyay  | 
 
 
+## Table of Contents
+- [Introduction](#1-introduction)
+- [What are Jenkins Monitoring Metrics?](#2-what-are-jenkins-monitoring-metrics?)
+- [Why Monitor Jenkins?](#3-Why-Monitor-Jenkins?)
+- [Types of Jenkins Metrics](#types-of-jenkins-metrics)
+- [Tools for Monitoring Jenkins](#tools-for-monitoring-jenkins)
+- [Conclusion](#conclusion)
+- [Contacts](#contacts)
+- [References](#references)
 
 
-## Introduction
+## 1. Introduction
 
 Jenkins is a leading automation server used to build, test, and deploy software. Monitoring Jenkins metrics is essential for maintaining its performance, identifying bottlenecks, and ensuring smooth CI/CD processes.
 
 ---
-## What are Jenkins Monitoring Metrics?
+## 2. What are Jenkins Monitoring Metrics?
 
 Jenkins monitoring metrics are quantitative indicators that provide insights into the performance and health of Jenkins instances, jobs, and pipelines. These metrics help administrators:
 - Detect system bottlenecks
@@ -22,7 +31,7 @@ Jenkins monitoring metrics are quantitative indicators that provide insights int
 ---
 
 
-## Why Monitor Jenkins?
+## 3. Why Monitor Jenkins?
 
 Monitoring Jenkins helps to:
 - **Improve Performance:** Identify and resolve inefficiencies.
