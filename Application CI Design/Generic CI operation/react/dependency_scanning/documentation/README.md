@@ -42,6 +42,7 @@ In modern frontend development, React projects heavily rely on third-party libra
 
 ## 3. Workflow
 
+![Screenshot 2025-05-18 163301](https://github.com/user-attachments/assets/7a0f61c9-5b87-43da-8757-aea725888ca7)
 
 
 ---
@@ -117,7 +118,7 @@ In modern frontend development, React projects heavily rely on third-party libra
 
 ## 10. Conclusion
 
-**npm audit** is a simple, fast, and built-in tool that helps you quickly find and fix known security issues in your React project's dependencies. It requires no extra setup and works directly with your existing package-lock.json. **npm audit** is built directly into npm, making it the easiest and fastest way to scan for vulnerabilities without needing extra setup. It integrates seamlessly into any Node.js project and works out-of-the-box with CI/CD. Unlike other tools, it doesn’t require third-party accounts or configuration, making it ideal for quick and native security checks.
+We will be using **npm audit** tool for dependency scanning for our frontend which is used in our Employee API in OT-Microservice. **npm audit** is a simple, fast, and built-in tool that helps you quickly find and fix known security issues in your React project's dependencies. It requires no extra setup and works directly with your existing package-lock.json. **npm audit** is built directly into npm, making it the easiest and fastest way to scan for vulnerabilities without needing extra setup. It integrates seamlessly into any Node.js project and works out-of-the-box with CI/CD. Unlike other tools, it doesn’t require third-party accounts or configuration, making it ideal for quick and native security checks.
 
 ---
 
