@@ -2,7 +2,7 @@
 
 | Author      | Created on  | Version    | Last updated by | Last edited on | Internal reviewer |   L0     |    L1     |    L2   |
 |-------------|-------------|------------|-----------------|----------------|-------------------|----------|-----------|-----------|
-| Rajeev Ranjan    |     | version 1  | N/A        |     N/A   |     Priyanshu         | Khushi Malhotra  | Mukul Joshi     | Piyush Upadhyay  |
+| Rajeev Ranjan    | 17-05-2025     | version 1  | N/A        |     N/A   |     Priyanshu         | Khushi Malhotra  | Mukul Joshi     | Piyush Upadhyay  |
 
 
 ## Table of Contents
@@ -19,7 +19,7 @@ In modern software development, dependency scanning is an essential practice to 
 ## 2. POC 
 
 
-## Step 1: Clone or Access the API Project
+### Step 1: Clone or Access the API Project
 
 If the API repository is hosted on a platform like GitHub, GitLab, or Bitbucket, you can clone it using the following command:
 
@@ -31,7 +31,7 @@ cd repository-name
 
 ---
 
-## Step 2:   Install Go
+### Step 2:   Install Go
 
 Install Go in you VM
 
@@ -46,7 +46,7 @@ go version
 ![Screenshot 2025-05-17 204137](https://github.com/user-attachments/assets/ab534fa5-5c8d-4d8d-8b39-956c04b5d45d)
 
 
-## Step 3:   Go Project Setup
+### Step 3:   Go Project Setup
 
 
 
@@ -74,7 +74,7 @@ go get github.com/sirupsen/logrus
 
 This will add the dependencies to the go.mod file, which tracks the Go dependencies for your project.
 
-## Step 3: Inspect Dependencies Using go list
+### Step 4: Inspect Dependencies Using go list
  
 To check all the dependencies your Go project is using, including transitive dependencies, you can run the `go list` command:
 
@@ -87,7 +87,7 @@ This will display all the modules and dependencies for your project, helping you
 ![Screenshot 2025-05-17 204210](https://github.com/user-attachments/assets/12dcc3ee-df29-42ab-9ebf-9dd442e9971b)
 
 
-## Step 4. Clean Up Unused Dependencies with go mod tidy
+### Step 5. Clean Up Unused Dependencies with go mod tidy
 
 The `go mod tidy` command is useful for cleaning up any unused dependencies and ensuring that the `go.mod` and `go.sum` files are in sync. It also helps to find potentially outdated or unnecessary dependencies.
 
@@ -100,7 +100,7 @@ This command will remove any dependencies that are no longer needed and update y
 ![Screenshot 2025-05-17 204234](https://github.com/user-attachments/assets/8226a186-ccaa-4945-b2c1-24937832a109)
 
 
-## Step 5  Install GoSec
+### Step 6:  Install GoSec
 
 To install GoSec, follow these steps:
 
@@ -115,7 +115,7 @@ To install GoSec, follow these steps:
 ![Screenshot 2025-05-17 204302](https://github.com/user-attachments/assets/100b82fa-9d96-4946-91ec-9ba17b13d14e)
 
 
-## Step 6: Verify GoSec Installation
+### Step 7: Verify GoSec Installation
 
 To ensure GoSec is installed correctly, run the following command:
 
@@ -126,11 +126,11 @@ gosec --version
 This should return the version of GoSec installed, confirming that the installation was successful.
 
 
-## Step 7: Run GoSec to Scan the Employee API
+### Step 8: Run GoSec to Scan the Employee API
 
 Now that GoSec is installed, you can use it to scan your Go code for security vulnerabilities.
 
-### Run GoSec on the Entire Project
+#### Run GoSec on the Entire Project
 
 Navigate to your project root directory (where `main.go` and `go.mod` are located), and run the following command:
 
