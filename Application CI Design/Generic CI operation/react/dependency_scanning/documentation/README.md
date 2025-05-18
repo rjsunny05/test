@@ -1,5 +1,3 @@
----
-
 # Detailed Documentation Of React Dependency Scanning
 
 | Author        | Created on | Version   | Last updated by | Last edited on | Internal reviewer | L0              | L1          | L2              |
